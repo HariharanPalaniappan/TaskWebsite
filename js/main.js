@@ -6,6 +6,10 @@ const phNumberDiv = $('.phone-number');
 const phNum = $('#phoneNumber');
 const fullName = $('#fullName');
 const fullNameDiv = $('.full-name');
+const residence = $('#residence');
+const nationality = $('#nationality');
+const email = $('#email');
+// slick carousel
 $('.banner-section ul').slick({
     dots: true,
     infinite: true,
@@ -13,6 +17,7 @@ $('.banner-section ul').slick({
     fade: true,
     cssEase: 'linear'
   });
+//   validation
   $('.apply-cta').on('click',()=> {
       $('.form-section').addClass('active');
       $('html').css('overflow','hidden')
@@ -33,6 +38,21 @@ $('.banner-section ul').slick({
     }
     else {
         phNumberDiv.removeClass('error');
+    }
+    if(residence.val() == 'select') {
+        $('.cor').addClass('error');
+    } else {
+        $('.cor').removeClass('error');
+    }
+    if(nationality.val() == 'select') {
+        $('.nationality').addClass('error');
+    } else {
+        $('.nationality').removeClass('error');
+    }
+    if(email.val().trim() == '') {
+        $('.email').addClass('error');
+    } else {
+        $('.email').removeClass('error');
     }
 });
 $('.hamburger').on('click',()=> {

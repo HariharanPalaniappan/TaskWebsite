@@ -537,16 +537,24 @@ main .market-insights .insight-content div a {
   padding: 10px 0 10px 10px;
   border-radius: 5px;
 }
-.form-section .form-popup .form div.full-name.error input {
-  border-color: #f00;
-}
 .form-section .form-popup .form div.phone-number {
   flex-basis: 100%;
   max-width: 100%;
   display: flex;
 }
-.form-section .form-popup .form div.phone-number.error input {
+.form-section .form-popup .form div .error {
+  display: none;
+}
+.form-section .form-popup .form div.error input,
+.form-section .form-popup .form div.error select {
   border-color: #f00;
+  color: #f00;
+}
+.form-section .form-popup .form div.error .error {
+  color: #f00;
+  font-size: 13px;
+  margin: 0;
+  display: block;
 }
 .form-section .form-popup .form div.radio-list {
   flex-basis: 100%;
